@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            overflow: scroll;
+            scrollbar-width: none;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .outer {
+            width: 100dvw;
+            height: 100dvh;
+            background-color: rgb(16,16,16);
+
+
+
+        }
+
+        .upper {
+            width: 88dvw;
+            height: 18dvh;
+            /* background-color: rgb(222, 241, 9); */
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+
+
+
+
+
+        }
+
+        .menu {
+            height: 200dvh;
+            width: 12dvw;
+            background-color: rgb(39, 39, 39);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+ 
+
+
+
+
+
+
+
+
+        }
+
+        .centre {
+            height: 100dvh;
+            width: 88dvw;
+            background-color: rgb(6, 6, 6);
+            position: fixed;
+            top: 18dvh;
+            right: 0;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: scroll;
+
+        }
+
+        .play {
+            width: 300px;
+            height: 280px;
+            background-color: rgb(9, 9, 9);
+            border-radius: 8px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: start;
+            flex-wrap: wrap;
+            overflow: scroll;
+
+
+        }
+
+
+        .content {
+            width: 100%;
+            border-radius: 8%;
+
+        }
+
+        .hd {
+            color: rgb(232, 239, 239);
+            font-weight: 90;
+            margin: 7px;
+
+
+
+
+        }
+
+        .views {
+            color: azure;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .one {
+            height: 50%;
+            width: 100%;
+            background-color: rgb(18, 17, 18);
+            display: flex;
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+        .two {
+            height: 50%;
+            width: 100%;
+            background-color: rgb(15, 15, 15);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: start;
+            flex-wrap: nowrap;
+            overflow: scroll;
+
+        }
+
+        .list {
+            display: flex;
+            width: 200dvw;
+        }
+
+        .list p {
+            background-color: aliceblue;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .in {
+            /* width: 100%; */
+            flex-wrap: nowrap;
+            overflow: scroll;
+            transition: 0.5s all ease;
+            border-radius: 15px;
+            cursor: pointer;
+           
+
+        }
+
+        .in p {
+            background-color: aliceblue;
+            padding: 10px;
+
+            margin: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            /* flex-direction: column; */
+            align-items: start;
+            flex-wrap: nowrap;
+            overflow: scroll;
+            transition: 0.5s all ease;
+            border-radius: 13px;
+            cursor: pointer;
+        }
+
+        .in p:hover {
+            background-color: rgb(165, 170, 174);
+        }
+
+        .f {
+
+            width: 40%;
+            background-color: white;
+
+
+        }
+
+        .s {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 15px;
+
+        }
+
+        i {
+            cursor: pointer;
+
+        }
+
+        .main {
+            background-color: white;
+            width: 45%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            border-radius: 55px;
+            padding: 10px;
+
+
+
+        }
+
+        .out {
+
+            background-color: white;
+            width: 4%;
+            height: 50%;
+            border-radius: 55px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            /* flex-direction: column; */
+            align-items: center;
+        }
+
+        .left {
+            font-size: 25px;
+            height: 4%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3px 8px 1px 10px;
+
+
+        }
+
+
+        .h6 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2px;
+        }
+        .right{
+            /* background-color: white; */
+            width: 10%;
+            height: 100%;
+            border-radius: 55px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .r{
+             /* background-color: white; */
+             font-size: 25px;
+            width: 10%;
+            height: 100%;
+            border-radius: 55px;
+            margin: 10px;
+            display: flex;
+            justify-content:space-evenly;
+            flex-direction: column;
+            align-items: end;
+        }
+        .c{
+             /* background-color: white; */
+             font-size: 25px;
+            width: 4%;
+            height: 100%;
+            border-radius: 55px;
+            /* margin: 10px; */
+            display: flex;
+            justify-content:center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .e{
+            background-color: rgb(217, 227, 236);
+             font-size: 25px;
+            width: 35%;
+            height: 50%;
+            border-radius: 55px;
+            /* margin: 10px; */
+            display: flex;
+            justify-content:end;
+            /* flex-direction: column; */
+            align-items: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="upper">
+            <div class="one">
+
+                <div class="main">
+
+
+                    <form action="https://www.youtube.com/" class="f">
+                        <input class="s" type="text" placeholder="Search " name="oq" id="">
+                    </form>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                </div>
+
+                <div class="out">
+                    <i class="fa-solid fa-microphone"></i>
+
+                </div>
+               <div class="e">
+                 <div class="c">
+                    <i class="fa-regular fa-plus"></i>
+                </div>
+                <p>Create</p>
+                <div class="right">
+   <i class="fa-regular fa-bell"></i>
+
+</div>
+<div class="r">
+    <i class="fa-solid fa-circle-h" style="color: #624f9c;"></i>
+</div>
+
+               </div>
+
+            </div>
+            <div class="two">
+                <div class="list">
+                    <p>All</p>
+                    <p>Cricket</p>
+                    <p>Music</p>
+                    <p>T-series</p>
+                    <p>srh</p>
+                    <p>Mixes</p>
+                    <p>Sitcoms</p>
+                    <p>Atif Aslam</p>
+                    <p>Albums</p>
+                    <p>Indian pop music</p>
+                    <p>Gaming</p>
+                    <p>Live</p>
+                    <p>Wickets</p>
+                    <p>Recently uploaded</p>
+                    <p>Watched</p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="menu">
+            <div class="left">
+
+                <i class="fa-solid fa-bars"></i>
+
+
+                <i class="fa-brands fa-youtube" style="color: #eb0527;"></i>
+                <h6>YouTube
+                </h6>
+
+            </div>
+
+
+            <div class="in">
+                
+               
+                 <p><i class="fa-solid fa-house"></i>Home</p>
+                <p><i class="fa-solid fa-circle-play"></i>Shorts</p>
+                <p><i class="fa-solid fa-circle-user"></i>Subscriptions</p>
+                <p><i class="fa-solid fa-clock-rotate-left"></i>History</p>
+               
+                
+                <p><i class="fa-solid fa-bars-staggered"></i>Playlists</p>
+                <p><i class="fa-solid fa-clock"></i>watch Later</p>
+                <p><i class="fa-solid fa-thumbs-up"></i>Liked Videos</p>
+                <p><i class="fa-solid fa-arrow-down"></i>Downloads</p>
+                <p>T-series</p>
+
+                <p><i class="fa-solid fa-clock"></i>Watch later</p>
+                <p><i class="fa-solid fa-thumbs-up"></i>Liked Videos</p>
+                <p><i class="fa-solid fa-arrow-down"></i>Downloads</p>
+                <p>Shopping</p>
+                <p>Indian pop music</p>
+                <p>Gaming</p>
+                <p>Live</p>
+                <p>News</p>
+                <p>Recently uploaded</p>
+                <p>Fashion & beauty</p>
+            </div>
+        </div>
+        <div class="centre">
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+            <div class="play">
+                <img class="content" src="ty.png" alt="">
+                <p class="hd">RCB VS SRH 2016 vivo IPL Final Match | 26 MAY 2016 FULL IPL HIGHLIGHTS</p>
+                <p class="views">6M views . 4hours</p>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
