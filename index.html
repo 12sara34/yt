@@ -21,7 +21,7 @@
         .outer {
             width: 100dvw;
             height: 100dvh;
-            background-color: rgb(16,16,16);
+            background-color: rgb(16, 16, 16);
 
 
 
@@ -46,13 +46,13 @@
         }
 
         .menu {
-            height: 200dvh;
+            height: 100dvh;
             width: 12dvw;
-            background-color: rgb(39, 39, 39);
-            position: fixed;
+            background-color: black;
+            /* position: fixed; */
             top: 0px;
             left: 0px;
- 
+
 
 
 
@@ -124,7 +124,8 @@
             background-color: rgb(18, 17, 18);
             display: flex;
             justify-content: center;
-
+            flex-wrap: nowrap;
+            overflow: scroll;
             align-items: center;
 
         }
@@ -138,8 +139,7 @@
             justify-content: center;
             flex-direction: column;
             align-items: start;
-            flex-wrap: nowrap;
-            overflow: scroll;
+
 
         }
 
@@ -149,33 +149,38 @@
         }
 
         .list p {
-            background-color: aliceblue;
+
+            color: white;
             padding: 5px;
             border-radius: 5px;
             margin: 10px;
             cursor: pointer;
+            background-color: rgba(99, 96, 96, 0.312);
         }
 
         .in {
-            /* width: 100%; */
+            width: 100%;
             flex-wrap: nowrap;
             overflow: scroll;
             transition: 0.5s all ease;
             border-radius: 15px;
             cursor: pointer;
-           
+
+
+
 
         }
 
         .in p {
-            background-color: aliceblue;
-            padding: 10px;
 
+            padding: 10px;
+            color: white;
+            background-color: rgba(39, 39, 39);
             margin: 10px;
             display: flex;
             justify-content: space-evenly;
             /* flex-direction: column; */
-            align-items: start;
+            align-items: end;
             flex-wrap: nowrap;
             overflow: scroll;
             transition: 0.5s all ease;
@@ -187,19 +192,28 @@
             background-color: rgb(165, 170, 174);
         }
 
+        .in i {
+            display: flex;
+            justify-content: start;
+            align-items: start;
+        }
+
         .f {
 
-            width: 40%;
-            background-color: white;
+            width: 90%;
+            /* background-color: white; */
 
 
         }
 
         .s {
-            width: 100%;
-            border: none;
-            outline: none;
-            font-size: 15px;
+            width: 10px;
+            border: 500px;
+            outline: 500px;
+            font-size: 22px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
 
         }
 
@@ -209,14 +223,16 @@
         }
 
         .main {
-            background-color: white;
-            width: 45%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
 
+            color: rgb(255, 255, 255);
+            width: 36%;
+            background-color: rgb(39, 39, 39);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin: 5%;
             border-radius: 55px;
-            padding: 10px;
+            /* padding: 10px; */
 
 
 
@@ -238,7 +254,8 @@
         .left {
             font-size: 25px;
             height: 4%;
-            background-color: white;
+            background-color: black;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -252,54 +269,69 @@
             font-family: 'Roboto', sans-serif;
             font-size: 2px;
         }
-        .right{
+
+        .right {
             /* background-color: white; */
             width: 10%;
             height: 100%;
             border-radius: 55px;
-            margin: 10px;
+            margin: 10%;
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
         }
-        .r{
-             /* background-color: white; */
-             font-size: 25px;
+
+        .r {
+            /* background-color: white; */
+            font-size: 25px;
             width: 10%;
             height: 100%;
             border-radius: 55px;
             margin: 10px;
             display: flex;
-            justify-content:space-evenly;
+            justify-content: space-evenly;
             flex-direction: column;
             align-items: end;
         }
-        .c{
-             /* background-color: white; */
-             font-size: 25px;
+
+        .c {
+            /* background-color: white; */
+            font-size: 25px;
             width: 4%;
             height: 100%;
             border-radius: 55px;
             /* margin: 10px; */
             display: flex;
-            justify-content:center;
+            justify-content: space-evenly;
             flex-direction: column;
             align-items: center;
         }
-        .e{
-            background-color: rgb(217, 227, 236);
-             font-size: 25px;
-            width: 35%;
+
+        .e {
+            /* background-color: rgb(217, 227, 236); */
+            font-size: 25px;
+            color: white;
+            width: 23%;
             height: 50%;
             border-radius: 55px;
-            /* margin: 10px; */
+            margin: 10px;
             display: flex;
-            justify-content:end;
+            justify-content: end;
             /* flex-direction: column; */
             align-items: center;
         }
-        
+
+        .s {
+            background-color: rgb(22, 21, 21);
+            width: 100%;
+
+        }
+        hr{
+            border-radius: 10px;
+          
+            background-color: rgb(5, 5, 5);
+        }
     </style>
 </head>
 
@@ -323,20 +355,21 @@
                     <i class="fa-solid fa-microphone"></i>
 
                 </div>
-               <div class="e">
-                 <div class="c">
-                    <i class="fa-regular fa-plus"></i>
+                <div class="e">
+                    <div class="c">
+                        <i class="fa-regular fa-plus"></i>
+                    </div>
+
+                    <p> Create</p>
+                    <div class="right">
+                        <i class="fa-regular fa-bell"></i>
+
+                    </div>
+                    <div class="r">
+                        <i class="fa-solid fa-circle-h" style="color: #624f9c;"></i>
+                    </div>
+
                 </div>
-                <p>Create</p>
-                <div class="right">
-   <i class="fa-regular fa-bell"></i>
-
-</div>
-<div class="r">
-    <i class="fa-solid fa-circle-h" style="color: #624f9c;"></i>
-</div>
-
-               </div>
 
             </div>
             <div class="two">
@@ -356,6 +389,8 @@
                     <p>Wickets</p>
                     <p>Recently uploaded</p>
                     <p>Watched</p>
+                    <p>Recently uploaded</p>
+                
                 </div>
 
             </div>
@@ -375,30 +410,37 @@
 
 
             <div class="in">
-                
-               
-                 <p><i class="fa-solid fa-house"></i>Home</p>
+
+
+                <p><i class="fa-solid fa-house"></i>Home</p>
                 <p><i class="fa-solid fa-circle-play"></i>Shorts</p>
                 <p><i class="fa-solid fa-circle-user"></i>Subscriptions</p>
+                <hr>
+                <p>You ></p>
                 <p><i class="fa-solid fa-clock-rotate-left"></i>History</p>
-               
-                
+
+
                 <p><i class="fa-solid fa-bars-staggered"></i>Playlists</p>
                 <p><i class="fa-solid fa-clock"></i>watch Later</p>
+                <hr>
                 <p><i class="fa-solid fa-thumbs-up"></i>Liked Videos</p>
                 <p><i class="fa-solid fa-arrow-down"></i>Downloads</p>
-                <p>T-series</p>
+
 
                 <p><i class="fa-solid fa-clock"></i>Watch later</p>
+                <hr>
                 <p><i class="fa-solid fa-thumbs-up"></i>Liked Videos</p>
                 <p><i class="fa-solid fa-arrow-down"></i>Downloads</p>
-                <p>Shopping</p>
-                <p>Indian pop music</p>
-                <p>Gaming</p>
-                <p>Live</p>
-                <p>News</p>
-                <p>Recently uploaded</p>
-                <p>Fashion & beauty</p>
+                <p><i class="fa-solid fa-bag-shopping"></i>Shopping</p>
+
+                <p><i class="fa-regular fa-music"></i>Music</p>
+                <p><i class="fa-solid fa-gamepad"></i>Gaming</p>
+                <hr>
+                <p><i class="fa-solid fa-rss"></i>Live</p>
+                <p><i class="fa-solid fa-newspaper"></i>News</p>
+                <p><i class="fa-solid fa-medal"></i>Sport</p>
+
+                <p><i class="fa-solid fa-child-dress"></i>Fashion & beauty</p>
             </div>
         </div>
         <div class="centre">
